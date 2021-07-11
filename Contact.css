@@ -1,0 +1,44 @@
+
+#content{
+    background-color: white;
+    height: 700px;
+    width: 100%;
+    color: black;
+}
+#content-caption{
+    font-size: 60px;
+    padding: 120px 80px 60px 80px;
+}
+#sec-bar{
+    float: left;
+    width: 50%;
+    padding: 0px 80px;
+}
+#message{
+    float: left;
+    width: 50%;
+    padding: 0px 80px;
+}
+#name,#email{
+    width:220px;
+    float: left;
+}
+.message{
+    float: left;
+    width:450px;
+    padding: 5px;
+    margin: 5px;
+}
+#messages{
+    height: 160px;
+}
+.message:focus{
+}
+.contact-link{
+    text-decoration: none;
+    color: black;
+}
+.contact-link:hover{
+    text-decoration: underline;
+    color: black;
+}
