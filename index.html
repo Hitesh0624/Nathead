@@ -1,79 +1,198 @@
+<!DOCTYPE html>
 <html>
-    
-    <head>
-        <title>Nathead</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- bootstrap><-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        
-        <!-- social media icons><!-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-        <link rel="stylesheet" href="Header.css">  
-        <link rel="stylesheet" href="Footer.css">
-        <link rel="stylesheet" href="Content.css">
-    </head>
-        
-    <body>
-        <nav id="header">
-            <div id="mainlogo">
-                <a href=""><img src="Icons/Nathead_white.png" id="nathead" class="logo">
-                <img src="Icons/Nathead_white.png" class="logo" id="n">
-                <img src="Icons/dash.png" class="logo" id="dash"></a>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <style>
+#content{
+    background-color:black;
+    height: 600px;
+}
+#content-caption{
+    font-size: 40px;
+    height: 700px;
+    padding: 140px 80px;
+    background-color:black;
+    color: white;
+    background-size: cover;
+}
+#e{
+    font-weight:600;
+}
+
+#caption-caption{
+    font-size: 20px;
+    font-family: sans-serif;
+    position: relative;
+    top: -20px;
+}
+.hiddentext{
+    display: none;
+    color: black;
+}
+#search-icon{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top:-8px;
+    left: 10px;
+}
+#search-icon-div{
+    position: relative;
+    float: left;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 50px;
+    left: 2px;
+}
+#search-box{
+    width: 450px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    float: left;
+    left: -1px;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+#search-box::placeholder{
+    color: #d0d0d0;
+}
+#search-box:focus{
+    outline:  none;
+}
+#select-button{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    float: left;
+    background-color: #FF0000;
+    color: white;
+}
+#popular{
+    position: relative;
+    top:20px;
+}
+#ppr{
+    font-size: 16px;
+    padding: 0px 5px;
+    margin: 5px 0px;
+    float: left;
+}
+.popular-btn{
+    float: left;
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 0px 5px;
+    margin: 5px;
+    border-radius: 10px;
+    background: none;
+    color: white;
+}
+.popular-btn:hover{
+    background: white;
+    color:black;
+}
+#home-img{
+    position: relative;
+    top:-30px;
+    left: 40px;
+    width: 40%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    float: right;
+    display: none;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+
+#search-box[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 210px;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+    font-size: 14px;
+    color: black;
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+    background-color: #e9e9e9 !important; 
+    color: #ffffff; 
+}
+.footertext a{
+    padding:0px 0px;
+    color: white;
+    font-size: 15px;
+    text-decoration-line: none;
+}
+.footertext a:hover{
+    color: darkgrey;
+}
+
+    </style>
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background: black;">
+        <div class="container col-lg-10" style="padding-top:20px;"><a class="navbar-brand" href="#page-top"><img src="nathead.png" style="zoom:5%;"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">BLOG</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Login</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Sign up</a></li>
+                </ul>
             </div>
-            <div class="dropbtn"><img src="Icons/tripledash.png" id="tripledash"></div>
-            <ul id="menu">
-                <div class="menu" id="login"><a href="Login.html">Login</a></div>
-                <div class="menu"><a href="Contact.html" style="position: relative; left:-15px">Contact</a></div>
-                <div class="menu"><a href="Blog.html">Blog</a></div>
-                <div class="menu"> <div class="dropdown"><a href="Services." class="services">Services <span style="font-size: 10px">&#9660;</span></a>
-                <div class="dropdown-content" id="dropdown-data">
-                    <a href="#">Penetration Testing and Security</a>
-                    <a href="#">Web Develoment</a>
-                    <a href="#">Online Business Starter</a>
-                    <a href="#">Enhancing Your Teaching Experience</a>
-                    <a href="#">Digital Marketing</a>
-                    <a href="#">Graphic Designing</a>
-                    <a href="#">Coding</a>
-                    <a href="#">Tech Teacher</a>
-                    <a href="#">Tech Support and Advisor</a>
-                    <a href="#">Other Services</a>
-                    </div></div></div>
-                <div class="menu"><a href="About%20Us.html" style="position: relative; left: -10px">About Us</a></div>
-                <div class="menu"><a href="">Home</a></div>
-            </ul>
-            <div id="dropbox">
-                <div class="dropmenu"><a href="">Home</a></div>
-                <div class="dropmenu"> <div class="dropdown"><a href="Services." class="services">Services <span style="font-size: 10px">&#9660;</span></a>
-                <div class="dropdown-content" id="dropdown-data">
-                    <a href="#">Penetration Testing and Security</a>
-                    <a href="#">Web Develoment</a>
-                    <a href="#">Online Business Starter</a>
-                    <a href="#">Digital Marketing</a>
-                    <a href="#">Graphic Designing</a>
-                    <a href="#">Coding</a>
-                    <a href="#">Other Services</a>
-                    
-                    </div></div></div>
-                <div class="dropmenu"><a href="About%20Us.html">About Us</a></div>
-                <div class="dropmenu"><a href="Blog.html">Blog</a></div>
-                <div class="dropmenu"><a href="Contact.html">Contact</a></div>
-                <div id="droplogin" class="dropmenu" style="position: relative; left:-5px"><a href="Login.html" style="position: relative; left:10px" >Login</a></div>
-            </div>
-        </nav>
-        
-        
-        <div id="content">
+        </div>
+    </nav>
+    <header style="background: rgb(0,0,0);">
+        <div id="content"class="container col-lg-10" style="zoom: 140%;">
             <div id="content-caption">
                 <br>
                 <div style="float: left">
                     <p id="e">Educate. Evolve. Emerge.</p>
                     <p id="caption-caption">Trying to bring all your tech needs in one place</p>
                     <div  id="search-icon-div">
-                        <img src="Icons/search.png" id="search-icon">
+                        <img src="search.png" id="search-icon">
                     </div>
                     <form autocomplete="off" style="float: left" >
                         <div class="autocomplete" style="float: left" >
@@ -86,89 +205,150 @@
                         <button class="popular-btn">Security</button>
                         <button class="popular-btn">Web Development</button>
                         <button class="popular-btn">Online Business Starter</button>
-                        <button class="popular-btn">Tech Support</button>
+                        <button class="popular-btn">App Develoment</button>
                     </div>
-                </div>
-                <div><img src="Icons/2.jpg" id="home-img"></div> <br><br><br><br><br>     
-                <!-- p style="font-size: 25px">”If your business is not on the internet, then your <br>business will be out of business” – Bill Gates</p><!-->
+                </div> 
             </div>
-            
-            <div id="sec-bar">
-                <p>Our Services</p>
-                <div id="hor-strip">
-                    <div id="hor-scroll">
-                <img src="Icons/RIGHT_ARROW.png" id="ra" class="arrow">
-                <img src="Icons/LEFT_ARROW.png" id="la" class="arrow">
-                        <div class="tiles">A</div>
-                        <div class="tiles">B</div>
-                        <div class="tiles">C</div>
-                        <div class="tiles">D</div>
-                        <div class="tiles">E</div>
-                        <div class="tiles">F</div>
-                        <div class="tiles">G</div>
-                        <div class="tiles">H</div>
-                        <div class="tiles">I</div>
-                        <div class="tiles">J</div>
-                        <div class="tiles">K</div>
-                    </div>
+            </div>
+    </header>
+    
+    
+    <section id="portfolio" class="portfolio"style="background-color: white;">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary">Services</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-1" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/cabin.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-2" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/cake.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-3" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/circus.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-4" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/game.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/safe.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/submarine.png">
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section class="text-white mb-0" id="about" style="background: rgb(0,0,0);">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">About us</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <div class="col-lg-2 ms-auto">
+                    <p class="lead">WHO ARE WE?</p>
+                </div>
+                <div class="col-lg-10 me-auto">
+                    <p class="lead">Nathead is a provider of various tech servicers such as security and penetration testing, web development, digital marketing and many more which can be either easily accessed by you at our home page or you may connect with us through email. We here in nathead help people with our experts available who are indeed a fast service provider team, to build a secure website or anything anyone desires. We are trying to have it all in here.
+                        Our goal is to provide you with quality and effective work which is worth your money invested.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 ms-auto">
+                    <p class="lead">WHAT DO WE DO?</p>
+                </div>
+                <div class="col-lg-10 me-auto">
+                    <p class="lead">Prevailing the current situation a business online is the need of the hour. We here at nathead stay with you from beginning by giving your business a name/logo, to designing your whole website with our best designing and content and even after the creation we help you in the marketing process. Connect with us, to build a business empire of your own.<br>At nathead we aim to put every tech need of yours at one place. We try and cope up with your expectations and provide you the best. We help make your dream come true.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download me-2"></i>Book our service now</a></div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary mb-0" ">Contact Us</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="name" required="" placeholder="Name"><label class="form-label">Name</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><label class="form-label">Email Address</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><label class="form-label">Phone Number</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-2 form-floating controls pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" style="height: 150px;"></textarea><label class="form-label">Message</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-2 pb-2"><input type="checkbox" id="subscribe" name="subscribe" value="subscribe" checked>
+                                <label for="subscribe" style="padding-left: 5px;">Subscribe us to receive newsletters, blogs, news of our new services and much more.</label></div>
+                        </div>
+                        <div id="success"></div>
+                        <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                    </form>
                 </div>
             </div>
         </div>
-        
-        <div id="footer">
-            <div id="footer-container">
-                <div class="footer-icons">
-                    <a href=""><img src="Icons/Nathead_black.jpg" id="footerlogo"></a>
-                    <p class="footercaption">"Trying to bring all your tech related needs at one place."</p>                        
-                    <div class="icontray" style="position: relative;left: 20px">
-                        <a href="https://www.facebook.com/Nathead-102662548722118" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-google"></a>
-                        <a href="https://www.instagram.com/nathead_/" class="fa fa-instagram"></a>
+    </section>
+    <footer class="text-center footer" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4"><img src="Nathead.png" style="zoom: 5%;"></h4>
+                    <p>"Trying to bring all the tech</p>
+                    <p>needs at one place."</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">Quick Links</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="footertext"><a href="#">Penetration Testing and Security</a></p>   
+                            <p class="footertext"><a href="#">Web Develoment</a></p>
+                            <p class="footertext"><a href="#">App Develoment</a></p>
+                            <p class="footertext"><a href="#">Online Business Starter</a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="footertext"><a href="#">Enhancing Your Teaching Experience</a></p>
+                            <p class="footertext"><a href="#">Digital Marketing</a></p>
+                            <p class="footertext"><a href="#">Graphic Designing</a></p>
+                            <p class="footertext"><a href="#">Other Services</a></p>
+                        </div>
                     </div>
                 </div>
-                <div id="quicklinks" style="width:150px;float: left">
-                    <p class="footerheading">Quick Links</p>
-                    <p class="footertext"><a href="" >Home</a></p>   
-                    <p class="footertext"><a href="Services.html" >Services</a></p>
-                    <p class="footertext"><a href="About%20Us.html" >About Us</a></p>
-                    <p class="footertext"><a href="Blog.html" >Blog</a></p>
-                    <p class="footertext"><a href="Contact.html">Contact</a></p>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">Around the Web</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+                    </ul>
                 </div>
-                <div id="servicelinks" style="width:300px;float: left">
-                    <p class="footerheading">Services</p>
-                    <p class="footertext"><a href="#">Penetration Testing and Security</a></p>   
-                    <p class="footertext"><a href="#">Web Develoment</a></p>
-                    <p class="footertext"><a href="#">Online Business Starter</a></p>
-                    <p class="footertext"><a href="#">Enhancing Your Teaching Experience</a></p>
-                    <p class="footertext"><a href="#">Other Services</a></p>
-                </div>
-                <div class="subscribe" style="width:360px;float:left">
-                    <p style="color: FF0000;font-size: 24px">Subscribe Now</p>
-                    <p style="font-size: 14px">Receive our newsletters, blogs, news of our new services and much more.</p>
-                    <div class="floating-label" style="float: left">      
-                        <input class="floating-input" type="text" id="fn" placeholder=" " >
-                        <label for="fn">First Name</label>
-                    </div>
-                    <div class="floating-label" style="float: right">      
-                        <input class="floating-input" type="text" id="ln" placeholder=" ">
-                        <label for="ln">Last Name</label>
-                    </div>
-                    <br>
-                    <div class="floating-label"> 
-                        <input class="floating-input" type="text" id="em" placeholder=" " style="width: 100%">
-                        <label for="em">Email Address</label>
-                    </div>
-                    <button class="submitbtn" type="submit">Subscribe</button>
-                </div>
+                
             </div>
         </div>
+    </footer>
+    <div class="text-center text-white copyright py-4" style="background-color:black;">
+        <div class="container"><small>Copyright ©&nbsp;Nathead 2021</small></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/freelancer.js"></script>
+</body>
 
-        
-        
-        <script type="text/javascript" src="Header.js"></script>
-        <script type="text/javascript" src="Content.js"></script>
-    
-    
-    </body>
 </html>
