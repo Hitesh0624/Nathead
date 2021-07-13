@@ -260,7 +260,8 @@
         var scroll = $(window).scrollTop();
         var zoom=172800/$(window).width();
         $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
-        if(scroll>$(window).height()){
+        if(scroll>($(window).height()+50)){
+            $("nav").css("background-image","url(13.jpeg)")
             if(a-scroll>0&&r==0){
                 $("nav").fadeIn(150);
                 r++
@@ -269,11 +270,12 @@
                 $("nav").fadeOut(150);
                 r--;
             }
-
-        }
-        else
+        }   
+        else{
+            $("nav").css("background-image","url(12.jpeg)")
             $("nav").fadeIn(150);
-        a=$(window).scrollTop();
+            
+        }a=$(window).scrollTop();
 });
     </script>
 </body>
