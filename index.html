@@ -365,19 +365,20 @@
                 $("#content-caption").css("padding-right","110px")
                 $(".center").css("width","80%")
                 $("#content-caption").css("padding-top","200px")
+                $("#content").css("height","830px")
             if(ww<"992")
                 $("#mainlogo").css("zoom","4%")
             if(ww<"1440")
                 $("#content").css("zoom",ww/1440)
             if(ww<"700"){
-                $("#content").css("zoom",ww/900)
-                $("#content-caption").css("padding-left","30px")
+                $("#content").css("zoom",ww/1000)
+                $("#content-caption").css("padding-left","50px")
                 $("#content-caption").css("padding-right","0px")
                 $("#content-caption").css("padding-top",(120000/parseInt(ww)+"px"))
                 $("#content").css("height",(400000/parseInt(ww)+"px"))
                 
 
-                $(".center").css("width","100%")
+                $(".center").css("width","95%")
             }
         }
         $(window).resize(function(){
