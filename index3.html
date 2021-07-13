@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <style>
+#content{
+    background-color:black;
+    height: 830px;
+}
+#content-caption{
+    font-size: 56px;
+    padding: 200px 110px;
+    background-color:black;
+    color: white;
+}
+#e{
+    font-weight:840;
+}
+
+#caption-caption{
+    font-size: 28px;
+    font-family: sans-serif;
+    position: relative;
+    top: -28px;
+}
+#search-icon{
+    position: relative;
+    height: 42px;
+    width: 42px;
+    top:-11px;
+    left: 14px;
+}
+#search-icon-div{
+    position: relative;
+    float: left;
+    height: 70px;
+    background-color: white;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    width: 70px;
+    left: 3px;
+}
+#search-box{
+    width: 630px;
+    height: 70px;
+    font-size: 28px;
+    border: none;
+    float: left;
+    left: -1.4px;
+    border: 1.4px solid transparent;
+    padding: 14px;
+    font-size: 22.4px;
+}
+#search-box::placeholder{
+    color: #d0d0d0;
+}
+#search-box:focus{
+    outline:  none;
+}
+#select-button{
+    width: 140px;
+    height: 70px;
+    font-size: 28px;
+    border: none;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    float: left;
+    background-color: #FF0000;
+    color: white;
+}
+#popular{
+    position: relative;
+    top:28px;
+}
+#ppr{
+    font-size: 22.4px;
+    padding: 0px 7px;
+    margin: 7px 0px;
+    float: left;
+}
+.popular-btn{
+    float: left;
+    font-size: 21px;
+    border: 1.4px solid white;
+    padding: 0px 7px;
+    margin: 7px;
+    border-radius: 14px;
+    background: none;
+    color: white;
+}
+.popular-btn:hover{
+    background: white;
+    color:black;
+}
+#home-img{
+    position: relative;
+    top:-42px;
+    left: 56px;
+    width: 56%;
+    height: auto;
+    margin: 0px;
+    float: right;
+    display: none;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+
+#search-box[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 294px;
+}
+
+.autocomplete-items div {
+    padding: 14px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1.4px solid #d4d4d4; 
+    font-size: 19.6px;
+    color: black;
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+    background-color: #e9e9e9 !important; 
+    color: #ffffff; 
+}
+.footertext{
+    text-align: left;
+}
+.footertext a{
+    color: white;
+    font-size: 15px;
+    text-decoration-line: none;
+    text-align: none;
+    margin: 0;
+}
+.footertext a:hover{
+    color: darkgrey;
+}
+.center {
+  margin: auto;
+  width: 80%;
+}
+
+    </style>
+       
+
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72" style="width: 100%;">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background: black;"style="width: 100%;">
+        <div class="container col-lg-10" style="padding-top:20px;"><a class="navbar-brand" href="#page-top"><img src="nathead.png" id="mainlogo" style="zoom:5%;"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">BLOG</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Login</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header style="background: rgb(0,0,0);">
+        <div id="content" class="center">
+            <div id="content-caption">
+                <br>
+                <div style="float: left">
+                    <p id="e">Educate. Evolve. Emerge.</p>
+                    <p id="caption-caption">Trying to bring all your tech needs in one place</p>
+                    <div>
+                    <div  id="search-icon-div">
+                        <img src="search.png" id="search-icon">
+                    </div>
+                    <form autocomplete="off" style="float: left" >
+                        <div class="autocomplete" style="float: left" >
+                            <input id="search-box" placeholder="Select service" list="searchlist">
+                        </div>
+                        <button id="select-button">Select</button>
+                    </form>
+                    <div id="popular">    
+                        <div id="ppr">Popular:</div>
+                        <button class="popular-btn">Security</button>
+                        <button class="popular-btn">Web Development</button>
+                        <button class="popular-btn">Online Business Starter</button>
+                        <button class="popular-btn">App Develoment</button>
+                    </div>
+                </div>
+                </div> 
+            </div>
+            </div>
+    </header>
+    
+    
+    <section id="portfolio" class="portfolio"style="background-color: white;">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary">Services</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-1" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/cabin.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-2" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/cake.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-3" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/circus.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-4" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/game.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/safe.png">
+                    </a></div>
+                <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal">
+                        <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                            <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="assets/img/portfolio/submarine.png">
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section class="text-white mb-0" id="about" style="background: rgb(0,0,0);">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">About us</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <div class="col-lg-2 ms-auto">
+                    <p class="lead">WHO ARE WE?</p>
+                </div>
+                <div class="col-lg-10 me-auto">
+                    <p class="lead">Nathead is a provider of various tech servicers such as security and penetration testing, web development, digital marketing and many more which can be either easily accessed by you at our home page or you may connect with us through email. We here in nathead help people with our experts available who are indeed a fast service provider team, to build a secure website or anything anyone desires. We are trying to have it all in here.
+                        Our goal is to provide you with quality and effective work which is worth your money invested.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 ms-auto">
+                    <p class="lead">WHAT DO WE DO?</p>
+                </div>
+                <div class="col-lg-10 me-auto">
+                    <p class="lead">Prevailing the current situation a business online is the need of the hour. We here at nathead stay with you from beginning by giving your business a name/logo, to designing your whole website with our best designing and content and even after the creation we help you in the marketing process. Connect with us, to build a business empire of your own.<br>At nathead we aim to put every tech need of yours at one place. We try and cope up with your expectations and provide you the best. We help make your dream come true.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download me-2"></i>Book our service now</a></div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary mb-0" ">Contact Us</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="name" required="" placeholder="Name"><label class="form-label">Name</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><label class="form-label">Email Address</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><label class="form-label">Phone Number</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-2 form-floating controls pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" style="height: 150px;"></textarea><label class="form-label">Message</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-2 pb-2"><input type="checkbox" id="subscribe" name="subscribe" value="subscribe" checked>
+                                <label for="subscribe" style="padding-left: 5px;">Subscribe us to receive newsletters, blogs, news of our new services and much more.</label></div>
+                        </div>
+                        <div id="success"></div>
+                        <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center footer" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4"><img src="Nathead.png" style="zoom: 5%;"></h4>
+                    <p>"Trying to bring all the tech</p>
+                    <p>needs at one place."</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">Quick Links</h4>
+                    <div class="row">
+                        <div class="col-md-6" >
+                            <p class="footertext"><a href="#">Penetration Testing and Security</a></p>   
+                            <p class="footertext"><a href="#">Web Develoment</a></p>
+                            <p class="footertext"><a href="#">App Develoment</a></p>
+                            <p class="footertext"><a href="#">Online Business Starter</a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="footertext"><a href="#">Enhancing Your Teaching Experience</a></p>
+                            <p class="footertext"><a href="#">Digital Marketing</a></p>
+                            <p class="footertext"><a href="#">Graphic Designing</a></p>
+                            <p class="footertext"><a href="#">Other Services</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">Around the Web</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="text-center text-white copyright py-2" style="background-color:black;">
+        <div class="container"><small>Copyright ©&nbsp;Nathead 2021</small></div>
+    </div>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/freelancer.js"></script>
+    <script type="text/javascript">
+        function verifysize(){
+            var ww=$(window).width()
+            $("#mainlogo").css("zoom","5%")
+            $("#content").css("zoom",ww/1440)
+                $("#content-caption").css("padding-left","110px")
+                $("#content-caption").css("padding-right","110px")
+                $(".center").css("width","80%")
+                $("#content-caption").css("padding-top","200px")
+                $("#content").css("height","830px")
+            if(ww<"992")
+                $("#mainlogo").css("zoom","4%")
+            if(ww<"1440")
+                $("#content").css("zoom",ww/1440)
+            if(ww<"700"){
+                $("#content").css("zoom",ww/1000)
+                $("#content-caption").css("padding-left","50px")
+                $("#content-caption").css("padding-right","0px")
+                $("#content-caption").css("padding-top",(130000/parseInt(ww)+"px"))
+                $("#content").css("height",(400000/parseInt(ww)+"px"))
+                
+
+                $(".center").css("width","95%")
+            }
+        }
+        $(window).resize(function(){
+            verifysize();
+        })
+        verifysize();
+        var services = ["Penetration Testing and Security","Website Development","Online Business Starter","Enhancing Your Teaching Experience","Digital Marketing","Graphic Designing","Coding","Tech Teacher","Tech Support and Advisor","Other Services","This service might not be available yet. Select this to view all services."];
+
+        function autocomplete(inp, arr) {
+    var currentFocus;
+    inp.addEventListener("input", function(e) {
+      
+        var h=0;
+        var a, b, i, val = this.value,q;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+            for(q=0;q<arr[i].length;q++){
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(q, val.length).toUpperCase() == val.toUpperCase()&&i!=(arr.length-1)) {
+                    h++;
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = arr[i].substr(0, q) + "<strong>" + arr[i].substr(q, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(q+val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                    break;
+                }
+                else if((i==(arr.length-1))&&h==0){ 
+                    h++;
+                    b = document.createElement("DIV");
+                    b.innerHTML = arr[i];
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                    break;
+                }
+            }  
+        }
+      if(h<=5)
+        $(".autocomplete-items").css("height",h*59+"px")
+      else
+        $(".autocomplete-items").css("height","295px")
+  });
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        } 
+        else if (e.keyCode == 38) { //up
+            /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        }
+        else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+                /*and simulate a click on the "active" item:*/
+                if (x) x[currentFocus].click();
+            }
+        }
+    });
+    inp.addEventListener("focus",function(e){
+        var val=inp.value;
+        if(val==""){
+            var a, b, i;
+            closeAllLists();
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", inp.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            inp.parentNode.appendChild(a);
+            for (i = 0; i < arr.length-1; i++) {
+                b = document.createElement("DIV");
+                b.innerHTML = arr[i];
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                b.addEventListener("click", function(e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    closeAllLists();
+                });
+                a.appendChild(b);
+            }
+        }
+    })
+    function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x) return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+        }
+    }
+    function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+        }
+    }
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+        autocomplete(document.getElementById("search-box"), services);
+    </script>
+    
+    
+</body>
+
+</html>
