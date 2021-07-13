@@ -364,15 +364,19 @@
                 $("#content-caption").css("padding-left","110px")
                 $("#content-caption").css("padding-right","110px")
                 $(".center").css("width","80%")
+                $("#content-caption").css("padding-top","200px")
             if(ww<"992")
                 $("#mainlogo").css("zoom","4%")
             if(ww<"1440")
                 $("#content").css("zoom",ww/1440)
             if(ww<"700"){
-                $("#content").css("zoom",ww/1000)
-                $("#content-caption").css("padding-left","0px")
+                $("#content").css("zoom",ww/900)
+                $("#content-caption").css("padding-left","30px")
                 $("#content-caption").css("padding-right","0px")
-                $(".center").css("width","90%")
+                $("#content-caption").css("padding-top",(100000/parseInt(ww)+"px"))
+                
+
+                $(".center").css("width","100%")
             }
         }
         $(window).resize(function(){
