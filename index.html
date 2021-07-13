@@ -16,8 +16,7 @@
 }
 #content-caption{
     font-size: 56px;
-    height: 700px;
-    padding: 450px 110px;
+    padding: 200px 110px;
     background-color:black;
     color: white;
 }
@@ -167,6 +166,10 @@
 .footertext a:hover{
     color: darkgrey;
 }
+.center {
+  margin: auto;
+  width: 80%;
+}
 
     </style>
        
@@ -175,7 +178,7 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72" style="width: 100%;">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background: black;"style="width: 100%;">
-        <div class="container col-lg-10" style="padding-top:20px;"><a class="navbar-brand" href="#page-top"><img src="nathead.png" style="zoom:5%;"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="container col-lg-10" style="padding-top:20px;"><a class="navbar-brand" href="#page-top"><img src="nathead.png" id="mainlogo" style="zoom:5%;"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">BLOG</a></li>
@@ -186,12 +189,13 @@
         </div>
     </nav>
     <header style="background: rgb(0,0,0);">
-        <div id="content"class="container col-lg-10">
+        <div id="content" class="center">
             <div id="content-caption">
                 <br>
                 <div style="float: left">
                     <p id="e">Educate. Evolve. Emerge.</p>
                     <p id="caption-caption">Trying to bring all your tech needs in one place</p>
+                    <div>
                     <div  id="search-icon-div">
                         <img src="search.png" id="search-icon">
                     </div>
@@ -208,6 +212,7 @@
                         <button class="popular-btn">Online Business Starter</button>
                         <button class="popular-btn">App Develoment</button>
                     </div>
+                </div>
                 </div> 
             </div>
             </div>
@@ -353,14 +358,29 @@
     <script src="assets/js/freelancer.js"></script>
     <script type="text/javascript">
         function verifysize(){
-            $("#content").css("zoom",$(window).width()/1440)
-            alert($(window).width())
+            var ww=$(window).width()
+            $("#mainlogo").css("zoom","5%")
+            $("#content").css("zoom",ww/1440)
+                $("#content-caption").css("padding-left","110px")
+                $("#content-caption").css("padding-right","110px")
+                $(".center").css("width","80%")
+            if(ww<"992")
+                $("#mainlogo").css("zoom","4%")
+            if(ww<"1440")
+                $("#content").css("zoom",ww/1440)
+            if(ww<"700"){
+                $("#content").css("zoom",ww/1000)
+                $("#content-caption").css("padding-left","0px")
+                $("#content-caption").css("padding-right","0px")
+                $(".center").css("width","90%")
+            }
         }
         $(window).resize(function(){
             verifysize();
         })
         verifysize();
-        alert("HI");
+        var services = ["Penetration Testing and Security","Website Development","Online Business Starter","Enhancing Your Teaching Experience","Digital Marketing","Graphic Designing","Coding","Tech Teacher","Tech Support and Advisor","Other Services","This service might not be available yet. Select this to view all services."];
+
         function autocomplete(inp, arr) {
     var currentFocus;
     inp.addEventListener("input", function(e) {
@@ -416,9 +436,9 @@
             }  
         }
       if(h<=5)
-        $(".autocomplete-items").css("height",h*42+"px")
+        $(".autocomplete-items").css("height",h*59+"px")
       else
-        $(".autocomplete-items").css("height","210px")
+        $(".autocomplete-items").css("height","295px")
   });
     inp.addEventListener("keydown", function(e) {
         var x = document.getElementById(this.id + "autocomplete-list");
