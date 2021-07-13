@@ -255,15 +255,21 @@
             verifysize();
         })
         a=$(window).scrollTop();
+        r=1;
     $(window).on("scroll touchmove",function() {
         var scroll = $(window).scrollTop();
         var zoom=172800/$(window).width();
         $("#back_img").css("background-size",zoom+scroll/5+"%");
         if(scroll>$(window).height()){
-            if(a-scroll>0)
+            if(a-scroll>0&&r==0){
                 $("nav").fadeIn(150);
-            else
+                r++
+            }
+            else if(a-scroll<0&&r==1){
                 $("nav").fadeOut(150);
+                r--;
+            }
+
         }
         else
             $("nav").fadeIn(150);
