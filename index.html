@@ -89,7 +89,7 @@
         </nav></div>
     </div>
 
-    <header style="background-image:url(12.jpeg);background-size: cover;" id="back_img" >
+    <header style="background-image:url(12.jpeg);background-size: 120%;" id="back_img" >
         <div class="container">
             <div id="content" class="col-lg-12 text-center">
                 <p id="content-caption">Educate. Evolve. Emerge.</p>
@@ -224,6 +224,7 @@
         
         function verifysize(){
             ww=$(window).width()
+            $("#back_img").css("background-size",172800/$(window).width()+"%");
             $(".service-heading").css("font-size","72px")
             $("#content-caption").css("font-size","66px")
             $("#caption").css("font-size","36px")
@@ -253,10 +254,20 @@
         $(window).resize(function(){
             verifysize();
         })
-        
+        a=$(window).scrollTop();
     $(window).on("scroll touchmove",function() {
         var scroll = $(window).scrollTop();
-        $("#back_img").css("background-size",120+scroll/5+"%");
+        var zoom=172800/$(window).width();
+        $("#back_img").css("background-size",zoom+scroll/5+"%");
+        if(scroll>$(window).height()){
+            if(a-scroll>0)
+                $("nav").fadeIn(150);
+            else
+                $("nav").fadeOut(150);
+        }
+        else
+            $("nav").fadeIn(150);
+        a=$(window).scrollTop();
 });
     </script>
 </body>
