@@ -12,25 +12,25 @@
     <style>
 #content{
     background-color:black;
-    height: 600px;
+    height: 830px;
 }
 #content-caption{
-    font-size: 40px;
+    font-size: 56px;
     height: 700px;
-    padding: 140px 80px;
+    padding: 200px 110px;
     background-color:black;
     color: white;
     background-size: cover;
 }
 #e{
-    font-weight:600;
+    font-weight:840;
 }
 
 #caption-caption{
-    font-size: 20px;
+    font-size: 28px;
     font-family: sans-serif;
     position: relative;
-    top: -20px;
+    top: -28px;
 }
 .hiddentext{
     display: none;
@@ -38,31 +38,31 @@
 }
 #search-icon{
     position: relative;
-    height: 30px;
-    width: 30px;
-    top:-8px;
-    left: 10px;
+    height: 42px;
+    width: 42px;
+    top:-11px;
+    left: 14px;
 }
 #search-icon-div{
     position: relative;
     float: left;
-    height: 50px;
+    height: 70px;
     background-color: white;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    width: 50px;
-    left: 2px;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    width: 70px;
+    left: 3px;
 }
 #search-box{
-    width: 450px;
-    height: 50px;
-    font-size: 20px;
+    width: 630px;
+    height: 70px;
+    font-size: 28px;
     border: none;
     float: left;
-    left: -1px;
-    border: 1px solid transparent;
-    padding: 10px;
-    font-size: 16px;
+    left: -1.4px;
+    border: 1.4px solid transparent;
+    padding: 14px;
+    font-size: 22.4px;
 }
 #search-box::placeholder{
     color: #d0d0d0;
@@ -71,33 +71,33 @@
     outline:  none;
 }
 #select-button{
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
+    width: 140px;
+    height: 70px;
+    font-size: 28px;
     border: none;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
     float: left;
     background-color: #FF0000;
     color: white;
 }
 #popular{
     position: relative;
-    top:20px;
+    top:28px;
 }
 #ppr{
-    font-size: 16px;
-    padding: 0px 5px;
-    margin: 5px 0px;
+    font-size: 22.4px;
+    padding: 0px 7px;
+    margin: 7px 0px;
     float: left;
 }
 .popular-btn{
     float: left;
-    font-size: 15px;
-    border: 1px solid white;
-    padding: 0px 5px;
-    margin: 5px;
-    border-radius: 10px;
+    font-size: 21px;
+    border: 1.4px solid white;
+    padding: 0px 7px;
+    margin: 7px;
+    border-radius: 14px;
     background: none;
     color: white;
 }
@@ -107,11 +107,11 @@
 }
 #home-img{
     position: relative;
-    top:-30px;
-    left: 40px;
-    width: 40%;
+    top:-42px;
+    left: 56px;
+    width: 56%;
     height: auto;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
     float: right;
     display: none;
 }
@@ -139,15 +139,15 @@
     right: 0;
     width: 100%;
     overflow-y: scroll;
-    height: 210px;
+    height: 294px;
 }
 
 .autocomplete-items div {
-    padding: 10px;
+    padding: 14px;
     cursor: pointer;
     background-color: #fff; 
-    border-bottom: 1px solid #d4d4d4; 
-    font-size: 14px;
+    border-bottom: 1.4px solid #d4d4d4; 
+    font-size: 19.6px;
     color: black;
 }
 
@@ -162,7 +162,7 @@
 .footertext a{
     padding:0px 0px;
     color: white;
-    font-size: 15px;
+    font-size: 21px;
     text-decoration-line: none;
 }
 .footertext a:hover{
@@ -170,6 +170,155 @@
 }
 
     </style>
+       <script type="text/javascript">
+        function verifysize(){
+            alert("Hi");
+            $("#content").css("zoom","100%")
+        }
+        $(window).resize(function(){
+            verifysize();
+        })
+        verifysize();
+        alert("HI");
+        function autocomplete(inp, arr) {
+    var currentFocus;
+    inp.addEventListener("input", function(e) {
+      
+        var h=0;
+        var a, b, i, val = this.value,q;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+            for(q=0;q<arr[i].length;q++){
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(q, val.length).toUpperCase() == val.toUpperCase()&&i!=(arr.length-1)) {
+                    h++;
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = arr[i].substr(0, q) + "<strong>" + arr[i].substr(q, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(q+val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                    break;
+                }
+                else if((i==(arr.length-1))&&h==0){ 
+                    h++;
+                    b = document.createElement("DIV");
+                    b.innerHTML = arr[i];
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                    break;
+                }
+            }  
+        }
+      if(h<=5)
+        $(".autocomplete-items").css("height",h*42+"px")
+      else
+        $(".autocomplete-items").css("height","210px")
+  });
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        } 
+        else if (e.keyCode == 38) { //up
+            /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        }
+        else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+                /*and simulate a click on the "active" item:*/
+                if (x) x[currentFocus].click();
+            }
+        }
+    });
+    inp.addEventListener("focus",function(e){
+        var val=inp.value;
+        if(val==""){
+            var a, b, i;
+            closeAllLists();
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", inp.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            inp.parentNode.appendChild(a);
+            for (i = 0; i < arr.length-1; i++) {
+                b = document.createElement("DIV");
+                b.innerHTML = arr[i];
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                b.addEventListener("click", function(e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    closeAllLists();
+                });
+                a.appendChild(b);
+            }
+        }
+    })
+    function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x) return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+        }
+    }
+    function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+        }
+    }
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+        autocomplete(document.getElementById("search-box"), services);
+    </script>
+
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
@@ -185,7 +334,7 @@
         </div>
     </nav>
     <header style="background: rgb(0,0,0);">
-        <div id="content"class="container col-lg-10" style="zoom: 140%;">
+        <div id="content"class="container col-lg-10">
             <div id="content-caption">
                 <br>
                 <div style="float: left">
@@ -315,8 +464,8 @@
                 </div>
                 <div class="col-md-4">
                     <h4 class="text-uppercase mb-4">Quick Links</h4>
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row" >
+                        <div class="col-md-6" >
                             <p class="footertext"><a href="#">Penetration Testing and Security</a></p>   
                             <p class="footertext"><a href="#">Web Develoment</a></p>
                             <p class="footertext"><a href="#">App Develoment</a></p>
@@ -346,9 +495,12 @@
     <div class="text-center text-white copyright py-4" style="background-color:black;">
         <div class="container"><small>Copyright ©&nbsp;Nathead 2021</small></div>
     </div>
+ 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
+    
+    
 </body>
 
 </html>
