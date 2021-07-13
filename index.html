@@ -48,7 +48,7 @@
         .service-div{
             margin: 80% 0px 25% 15%;
         }
-        #whorv{
+        #whorv,#wwd{
             font-family: CC Colon;
             color: white;
         }
@@ -104,14 +104,14 @@
     <section style="background-color: teal; height: 800px; background-size: contain; " id="whorv" >
         <div class="container">
             <div class="col-lg-6" style="margin: 8% 10%;">
-        <p style="font-size: 72px;">Who are we?</p>
+        <p style="font-size: 72px;" class="question">Who are we?</p>
         <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif">Nathead is a provider of various tech servicers such as security and penetration testing, web development, digital marketing and many more which can be either easily accessed by you at our home page or you may connect with us through email. We here in nathead help people with our experts available who are indeed a fast service provider team, to build a secure website or anything anyone desires. We are trying to have it all in here. Our goal is to provide you with quality and effective work which is worth your money invested.</p>
     </div>
 </div>
     </section>
 
 
-    <section style="background-image: url(12.jpeg); height: 8300px; background-size: contain;;">
+    <section style="background-image: url(12.jpeg); height: 8300px; background-size: contain;"id="service-panel">
         <div class="container">
             <div class="row">
                 <div class="col-md-6" style="color: white;">
@@ -161,11 +161,11 @@
         </div>
     </section>
 
-    <section style="background-color:steelblue; height: 800px; background-size: contain;" id="whorv">
+    <section style="background-color:steelblue; height: 800px; background-size: contain;" id="wwd">
         <div class="container">
             <div class="col-lg-6" style="margin: 6% 10%;">
             
-        <p style="font-size: 72px;">What we do?</p>
+        <p style="font-size: 72px;"class="question">What we do?</p>
         <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif">Prevailing the current situation a business online is the need of the hour. We here at nathead stay with you from beginning by giving your business a name/logo, to designing your whole website with our best designing and developing team and even after the creation we help you in the marketing process. Connect with us, to build a business empire of your own.
             At nathead we aim to put every tech need of yours at one place. We try and cope up with your expectations and provide you the best. We help make your dream come true.</p>
             <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download me-2"></i>Book our service now</a></div>
@@ -227,11 +227,21 @@
             ww=$(window).width()
             $(".service-heading").css("font-size","72px")
             $("#content-caption").css("font-size","66px")
+            $("#caption").css("font-size","36px")
+            $(".question").css("font-size","72px")
             $("body").css("zoom","100%")
+            $("#whorv").css("height","800px")
+            $("#wwd").css("height","800px")
             
             if(ww<500){
-                $("p").css("font-size","50%")
+                $(".service-heading").css("font-size","36px")
+                $("#content-caption").css("font-size","33px")
+                $("#caption").css("font-size","18px")
+                $(".question").css("font-size","36px")
                 $("#laptop").css("zoom","10%")
+                $("#whorv").css("height","900px")
+                $("#wwd").css("height","1000px")
+                $("#service-panel").css("height","5000px")
             }
             else if(ww<800){
                 $(".service-heading").css("font-size","40px")
