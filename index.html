@@ -86,9 +86,12 @@
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
 
     <div class="container">
-        <div class="col-lg-12 text-center">
+        <div class="row">
+        <div class="col-lg-6 text-center">
         <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background-image:url(12.jpeg);background-size: 120%;">
-            <div class="container col-lg-10" style="padding-top:20px;"><a class="navbar-brand" href="#page-top"><img src="nathead.png" style="zoom:5%;"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="container col-lg-10" style="padding-top:20px;">
+                <a class="navbar-brand" href="#page-top"><img src="nathead.png" style="zoom:5%;"></a>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a href="Contact.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn">Contact</a></li>
@@ -98,7 +101,9 @@
                     </ul>
                 </div>
             </div>
-        </nav></div>
+            </div>
+        </nav>
+        </div>
     </div>
 
     <header style="background-image:url(12.jpeg);background-size: 120%;" id="back_img" >
@@ -133,7 +138,7 @@
                         <div class="text-center mt-4" style="padding-top: 30px;"><a class="btn btn-outline-light btn-xl" id="button-1" role="button" href="#"></i>Read More</a></div>
                     </div>
                     <div class="service-div">
-                        <p class="service-heading">Test and secure your network</p>
+                        <p class="service-heading">Test and get your network secured</p>
                         <div class="text-center mt-4" style="padding-top: 30px;"><a class="btn btn-outline-light btn-xl" id="button-1" role="button" href="#"></i>Read More</a></div>
                     </div>
                     <div class="service-div">
@@ -246,7 +251,7 @@
             $("#whorv").css("height","800px")
             $("#wwd").css("height","800px")
             $(".abtus").css("font-size","20px")
-            $("#laptop").css("display","block")
+            $("#laptop").css("display","none")
             $("#service-panel").css("height","8300px")
             
             if(ww<500){
@@ -255,16 +260,16 @@
                 $("#caption").css("font-size","18px")
                 $(".question").css("font-size","36px")
                 $(".abtus").css("font-size","18px")
-                $("#laptop").css("display","none")
                 $("#whorv").css("height","800px")
                 $("#wwd").css("height","900px")
                 $("#service-panel").css("height","5000px")
-
             }
             else if(ww<800){
                 $(".service-heading").css("font-size","40px")
                 $("#content-caption").css("font-size","36px")
-                $("#laptop").css("display","none")
+            }
+            else if(ww>1400){
+                $("#laptop").css("display","block")
             }
         }
         verifysize();
