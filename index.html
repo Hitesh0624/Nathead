@@ -134,7 +134,7 @@
                     <div class="service-div">   
                     </div>
                     <div class="service-div">
-                        <p class="service-heading">Get your website developed.</p>
+                        <p class="service-heading">Get your website designed.</p>
                         <div class="text-center mt-4" style="padding-top: 30px;"><a class="btn btn-outline-light btn-xl" id="button-1" role="button" href="#"></i>Read More</a></div>
                     </div>
                     <div class="service-div">
@@ -193,9 +193,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-5 mb-lg-0">
-                    <img src="Nathead.png" style="zoom: 5%;">
+                    <img src="nathead.png" style="zoom: 5%;">
                     <br><br>
-                    <p>"Trying to bring all the tech</p>
+                    <p>"Trying to bring all your tech</p>
                     <p>needs at one place."</p>
                 </div>
                 <div class="col-md-4">
@@ -239,7 +239,9 @@
     <script src="assets/js/freelancer.js"></script>
     <script type="text/javascript">
         
-        
+        a=$(window).scrollTop();
+        r=1;
+        h=$(window).height();
         function verifysize(){
             ww=$(window).width()
             $("#back_img,nav").css("background-size",172800/$(window).width()+"%");
@@ -272,18 +274,18 @@
                 $("#laptop").css("display","block")
             }
         }
+
         verifysize();
 
         $(window).resize(function(){
             verifysize();
         })
-        a=$(window).scrollTop();
-        r=1;
+        
     $(window).on("scroll touchmove",function() {
         var scroll = $(window).scrollTop();
         var zoom=172800/$(window).width();
         $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
-        if(scroll>($(window).height()+50)){
+        if(scroll>(h+50)){
             $("nav").css("background-image","url(13.jpeg)")
             if(a-scroll>0&&r==0){
                 $("nav").fadeIn(150);
