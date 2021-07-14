@@ -15,7 +15,7 @@ a=$(window).scrollTop();
             $(".abtus").css("font-size","20px")
             $("#laptop").css("display","none")
             $("#service-panel").css("height","8300px")
-            $("#icon").attr("href","Files/img/fevicon.png")
+            $("#icon").attr("href","files/img/fevicon.png")
             
             
             if(ww<500){
@@ -27,7 +27,7 @@ a=$(window).scrollTop();
                 $("#whorv").css("height","800px")
                 $("#wwd").css("height","900px")
                 $("#service-panel").css("height","5000px")
-                $("#icon").attr("href","Files/img/fevicon_dark.png")
+                $("#icon").attr("href","files/img/fevicon_dark.png")
                 
             }
             else if(ww<800){
@@ -50,7 +50,7 @@ a=$(window).scrollTop();
         var zoom=172800/$(window).width();
         $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
         if(scroll>(h+50)){
-            $("nav").css("background-image","url(Files/img/13.jpeg)")
+            $("nav").css("background-image","url(files/img/13.jpeg)")
             if(a-scroll>0&&r==0){
                 $("nav").fadeIn(150);
                 r++
@@ -61,7 +61,7 @@ a=$(window).scrollTop();
             }
         }   
         else{
-            $("nav").css("background-image","url(Files/img/12.jpeg)")
+            $("nav").css("background-image","url(files/img/12.jpeg)")
             $("nav").fadeIn(150);
             
         }a=$(window).scrollTop();
