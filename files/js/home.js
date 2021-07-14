@@ -31,7 +31,7 @@ function verifysize(){
         $("#wwd").css("height","1000px")
         $("#service-panel").css("height","5000px")
         $("#icon").attr("href","files/img/fevicon_dark.png")
-        $(".gif").css("zoom","50%")
+        $(".gif").css("zoom","40%")
         $(".gif").css("margin","auto")
         $(".about").css("margin-left","0%")
         $("#back_img").css("background-size","contain")
@@ -40,6 +40,7 @@ function verifysize(){
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
         $("#content-caption").css("font-size","36px")
+        $(".gif").css("zoom","50%")
     }
     else if(ww>1400){
         $("#laptop").css("display","block")
