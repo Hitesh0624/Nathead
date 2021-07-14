@@ -80,6 +80,9 @@
             width: 700px;
             height: 500px;"
         }
+        .navbar-toggler:focus{
+            box-shadow: none;
+        }
     </style>
 </head>
 
@@ -91,7 +94,7 @@
         <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background-image:url(12.jpeg);background-size: 120%;">
             <div class="container col-lg-10" style="padding-top:20px;">
                 <a class="navbar-brand" href="#page-top"><img src="nathead.png" style="zoom:5%;"></a>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" id="tripledash" style="zoom: 200%;"aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a href="Contact.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn">Contact</a></li>
@@ -301,6 +304,7 @@
             $("nav").fadeIn(150);
             
         }a=$(window).scrollTop();
+        
 });
     </script>
 </body>
