@@ -1,0 +1,75 @@
+
+        @font-face {
+            font-family: CC Colon;
+            src: url(../font/cc\ colon.ttf);
+}
+        #content{
+            height: 830px;
+            padding-top: 300px;
+        }
+        #content-caption{
+            font-family: CC Colon;
+            margin: auto;
+            color: white;
+            font-size: 66px;
+        }
+        #caption{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            color: white;
+            font-size: 36px;
+        }
+        .footertext a{
+            padding:0px 0px;
+            color: white;
+            font-size: 15px;
+            text-decoration-line: none;
+        }
+        .footertext a:hover{
+            color: darkgrey;
+        }
+        .service-heading{
+            font-size: 72px;
+            padding: 0px;
+            margin: 0px;
+            font-family: CC Colon;
+        }
+        .service-div{
+            margin: 80% 0px 25% 10%;
+        }
+        #whorv,#wwd{
+            font-family: CC Colon;
+            color: white;
+        }
+        #button-1{
+            border-radius: 50px;
+            font-weight: bolder;
+        }
+        .form-control{
+            background-color: wheat;
+        }
+        .form-control::content{
+            background-color: wheat;
+        }
+        .h-btn{
+            cursor: pointer;
+        }
+        .h-btn:hover{
+            color: #FF0000;
+        }
+        .abtus{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        #stickey-laptop{
+            position:sticky; 
+            float: right; 
+            padding: 0% 6%;
+            top:230px;
+            width: 700px;
+            height: 500px;"
+        }
+        .navbar-toggler:focus{
+            box-shadow: none;
+        }
+   
