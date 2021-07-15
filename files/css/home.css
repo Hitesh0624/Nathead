@@ -108,6 +108,21 @@
             padding: 0;
             margin: 0;
         }
+        .screen{
+            position: absolute;
+            height: 195px;
+            width: 330px;
+            background-color: white;
+            left: 50%;
+            -webkit-transform: translate(-50%, 25%);
+            transform: translate(-50%, 25%);
+        }
+        .screen-images{
+
+            height: 195px;
+            width: 330px;
+            
+        }
         #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8{
             opacity: 0;
             padding: 0;
@@ -121,4 +136,10 @@
             white-space: nowrap;
             padding: 0;
             margin: 0;
+        }
+        #mobile-laptop{
+            width:480px ;
+            left: 50%;
+            -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
         }

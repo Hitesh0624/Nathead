@@ -3,7 +3,6 @@ a=$(window).scrollTop();
 h=$(window).height();
 ww=$(window).width()
 $("#static_image").css("display","block")
-$("#static_image").css("width",ww)
 r=1;
 i=1;
 l=1;
@@ -13,7 +12,7 @@ y=["0","0","0","0","0","0","0","0"]
 $("#static_image").css("height",$(window).height())
 function verifysize(){
     ww=$(window).width()
-    $("#back_img,nav").css("background-size",182800/$(window).width()+"%");
+    $("#back_img,nav").css("background-size",182800/ww+"%");
     $(".service-heading").css("font-size","72px")
     $("#content-caption").css("font-size","66px")
     $("#caption").css("font-size","36px")
@@ -29,8 +28,9 @@ function verifysize(){
     $(".gif").css("margin","16% 0%")
     $(".about").css("margin-left","10%")
     $(".empty").css("height","600px")
-    $("#static_image").css("height",$(window).height())
     $("#static_image").css("left","0%")
+    $("#static_image").css("width",ww)
+    $(".screen").css("display","block")
     if(ww<500){
         $(".service-heading").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
@@ -54,6 +54,7 @@ function verifysize(){
     }
     else if(ww>1400){
         $("#laptop").css("display","block")
+        $(".screen").css("display","none")
     }
 }
 verifysize();
