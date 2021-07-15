@@ -1,9 +1,15 @@
 
 a=$(window).scrollTop();
+h=$(window).height();
+ww=$(window).width()
+$("#static_image").css("display","block")
+$("#static_image").css("width",ww)
 r=1;
 i=1;
 l=1;
-h=$(window).height();
+q=0
+x=["0","0","0","0","0","0","0","0"]
+y=["0","0","0","0","0","0","0","0"]
 $("#static_image").css("height",$(window).height())
 function verifysize(){
     ww=$(window).width()
@@ -17,7 +23,7 @@ function verifysize(){
     $("#wwd").css("height","800px")
     $(".abtus").css("font-size","20px")
     $("#laptop").css("display","none")
-    $("#service-panel").css("height","8300px")
+    $("#service-panel").css("height","4800px")
     $("#icon").attr("href","files/img/fevicon.png")
     $(".gif").css("zoom","70%")
     $(".gif").css("margin","16% 0%")
@@ -60,8 +66,7 @@ $(window).on("scroll touchmove",function() {
     var scroll = $(window).scrollTop();
     var zoom=172800/$(window).width();
     $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
-    if(scroll>(h+50)){
-        $("#static_image").css("display","block")
+    if(scroll>($("#whorv").offset().top-50)){
         $("nav").css("background-image","url(files/img/13.jpeg)")
         if(a-scroll>0&&r==0){
             $("nav").fadeIn(150);
@@ -76,28 +81,27 @@ $(window).on("scroll touchmove",function() {
         $("nav").css("background-image","url(files/img/12.jpeg)")
         $("nav").fadeIn(150);
     }
-    var g=$("#t"+i).offset().top
-    if(a<scroll){
-        if(scroll+h>=g&&l==1){
-            l=0;
-            $("#t"+i).animate({opacity:"1"},500);
+    for(i=1;i<9;i++){
+        item=$("#t"+i)
+        if(((item.offset().top+item.height())<=(scroll+h) )&& (item.offset().top>=scroll))
+        {
+            if(JSON.stringify(x)==JSON.stringify(y)){
+                x[i-1]="1"
+                item.animate({opacity:"1"},100);
+                q=i
+                $("#laptop-screen").animate({scrollLeft:(i-1)*444.2}, 300);
+               
+            }
+            
         }
-        if(scroll>=g&&l==0){
-            $("#t"+i).animate({opacity:"0"},500);
-            i++
-            l=1;
+        else {
+            if(i==q){
+                x[i-1]="0"
+                item.animate({opacity:"0"},100);
+                q=0
+            }
         }
-    }
-    else if(a>scroll){
-        if(scroll>=g&&l==1){
-            $("#t"+i).animate({opacity:"1"},500);
-            i--
-            l=0;
-        }
-        if(scroll+h>=(g)&&l==0){
-            l=1;
-            $("#t"+i).animate({opacity:"0"},500);
-        }
+        
     }
     
     a=$(window).scrollTop();

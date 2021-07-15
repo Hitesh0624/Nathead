@@ -85,16 +85,40 @@
             box-shadow: none;
         }
         .laptop-images{
-            height: 312px;
-            position: absolute;
+            height: 260px;
+            width: 441px;
+            position: relative;
+            margin: auto;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 0;
+            margin: 0;
         }
         #laptop-screen{
             position:absolute; 
-            height: 312px;
-            width: 518px;
-            left: 126px;
-            top: 26px;
+            height: 260px;
+            width: 441px;
+            left: 137px;
+            top: 31px;
+            background-color: white;
+            overflow:hidden;
+            -ms-overflow-style: none;
+            padding: 0;
+            margin: 0;
         }
         #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8{
             opacity: 0;
+            padding: 0;
+            margin: 0;
+        }
+        #laptop-screen::-webkit-scrollbar{
+            display: none;
+        }
+        #hor-scroll{
+            height: 260px;
+            white-space: nowrap;
+            padding: 0;
+            margin: 0;
         }
