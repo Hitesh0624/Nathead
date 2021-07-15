@@ -20,6 +20,7 @@ function verifysize(){
     $(".gif").css("margin","16% 0%")
     $(".about").css("margin-left","10%")
     $(".empty").css("height","600px")
+    $("#static-image").css("width",ww)
     if(ww<500){
         $(".service-heading").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
@@ -71,5 +72,5 @@ $(window).on("scroll touchmove",function() {
     }
 a=$(window).scrollTop();
     })
-$("static-image").css("width",$(window).width())
+$("#static-image").css("width",$(window).width())
     
