@@ -37,7 +37,7 @@ function verifysize(){
         $(".gif").css("margin","auto")
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
-        $("#static_image").css("left","-170%")
+        $("#static_image").css("left","-150%")
     }
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
