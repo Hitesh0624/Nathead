@@ -9,7 +9,7 @@ l=1;
 q=0
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
-$("#static_image").css("height",$(window).height())
+$("#static_image").css("height",h)
 function verifysize(){
     ww=$(window).width()
     $("#back_img,nav").css("background-size",182800/ww+"%");
@@ -28,8 +28,6 @@ function verifysize(){
     $(".gif").css("margin","16% 0%")
     $(".about").css("margin-left","10%")
     $(".empty").css("height","600px")
-    $("#static_image").css("left","0%")
-    $("#static_image").css("width",ww)
     $(".screen").css("display","block")
     $(".mobile-laptop").css("display","block")
     if(ww<500){
@@ -47,6 +45,7 @@ function verifysize(){
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-150%")
+        
         
     }
     else if(ww<800){
@@ -85,9 +84,12 @@ $(window).on("scroll touchmove",function() {
         $("nav").css("background-image","url(files/img/12.jpeg)")
         $("nav").fadeIn(150);
     }
+    z=0
+    if(($(window).width())<1400)
+        z=198.7
     for(i=1;i<9;i++){
         item=$("#t"+i)
-        if(((item.offset().top+item.height())<=(scroll+h) )&& (item.offset().top>=scroll))
+        if(((item.offset().top+item.height()+z)<=(scroll+h) )&& (item.offset().top>=scroll))
         {
             if(JSON.stringify(x)==JSON.stringify(y)){
                 x[i-1]="1"
