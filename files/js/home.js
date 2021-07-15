@@ -61,6 +61,7 @@ $(window).on("scroll touchmove",function() {
     var zoom=172800/$(window).width();
     $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
     if(scroll>(h+50)){
+        $("#static_image").css("display","block")
         $("nav").css("background-image","url(files/img/13.jpeg)")
         if(a-scroll>0&&r==0){
             $("nav").fadeIn(150);
