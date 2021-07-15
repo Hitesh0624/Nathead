@@ -30,6 +30,13 @@ function verifysize(){
     $(".empty").css("height","600px")
     $(".screen").css("display","block")
     $(".mobile-laptop").css("display","block")
+    $(".screen").css("zoom","100%")
+    $(".mobile-laptop").css("zoom","100%")
+    $(".laptop-screen").css("zoom","100%")
+    $(".gif").css("display","block")
+    $(".about").removeClass("col-lg-8")
+    $(".about").addClass("col-lg-6")
+
     if(ww<500){
         $(".service-heading").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
@@ -51,7 +58,21 @@ function verifysize(){
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
         $("#content-caption").css("font-size","36px")
-        $(".gif").css("zoom","50%")
+        $(".gif").css("display","none")
+        $(".empty").css("height","400px")
+        $(".about").removeClass("col-lg-6")
+        $(".about").addClass("col-lg-8")
+    }
+    else if(ww>800&&ww<1400){
+        $(".screen").css("zoom","140%")
+        $(".mobile-laptop").css("zoom","140%")
+        $(".laptop-screen").css("zoom","140%")
+        $(".empty").css("height","500px")
+        $(".gif").css("display","none")
+        $(".about").removeClass("col-lg-6")
+        $(".about").addClass("col-lg-8")
+
+
     }
     else if(ww>1400){
         $("#laptop").css("display","block")
