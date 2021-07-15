@@ -72,4 +72,7 @@
         .navbar-toggler:focus{
             box-shadow: none;
         }
-        
+        .laptop-images{
+            height: 312px;
+            position: absolute;
+        }

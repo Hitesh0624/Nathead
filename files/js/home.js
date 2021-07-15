@@ -19,7 +19,6 @@ function verifysize(){
     $(".gif").css("zoom","70%")
     $(".gif").css("margin","16% 0%")
     $(".about").css("margin-left","10%")
-    $("#back_img").css("background-size","120%")
     $(".empty").css("height","600px")
     if(ww<500){
         $(".service-heading").css("font-size","36px")
@@ -34,7 +33,6 @@ function verifysize(){
         $(".gif").css("zoom","40%")
         $(".gif").css("margin","auto")
         $(".about").css("margin-left","0%")
-        $("#back_img").css("background-size","contain")
         $(".empty").css("height","300px")
     }
     else if(ww<800){
@@ -73,5 +71,5 @@ $(window).on("scroll touchmove",function() {
     }
 a=$(window).scrollTop();
     })
-
-    $("#sticky-background").css("height",$(window).height())
+$("static-image").css("width",$(window).width())
+    
