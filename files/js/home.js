@@ -8,6 +8,9 @@ l=1;
 q=0
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
+var w=parseFloat($(".logo").css("width"))*233/300;
+var n=0;
+var b=parseFloat($("#dash").css("left"));
 $("#static_image").css("height",h+200)
 function verifysize(){
     ww=$(window).width()
@@ -92,6 +95,11 @@ verifysize();
 
 $(window).resize(function(){
     verifysize();
+    if($("#n").offset().left>$("#nathead").offset().left)
+        $("#dash").css("left",$("#n").offset().left)
+    else
+        $("#dash").css("left",$("#nathead").offset().left)
+    b=parseFloat($("#dash").css("left"));
 })
 
 
@@ -100,6 +108,25 @@ $(window).on("scroll touchmove",function() {
     var zoom=172800/$(window).width();
     $("#static_image").css("display","block")
     $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
+    
+    if((a-$(window).scrollTop())<0 && n==0){
+        $("#nathead").stop();
+        $("#dash").stop();
+        $("#nathead").fadeOut(150);
+        $("#n").show();
+        $("#dash").animate({left: b-w}, 150);
+        n=1;
+    }
+    else if((a-$(window).scrollTop())>0 && n==1){
+        $("#nathead").stop();
+        $("#dash").stop();
+        $("#nathead").fadeIn(150,function(){
+        $("#n").hide();
+        });
+        $("#dash").animate({left: b}, 150);
+        n=0;
+        }
+    
     if(scroll>($("#whorv").offset().top-50)){
         $("nav").css("background-image","url(files/img/service.jpeg)")
         if(a-scroll>0&&r==0){

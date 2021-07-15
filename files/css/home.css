@@ -2,7 +2,16 @@
         @font-face {
             font-family: CC Colon;
             src: url(../font/cc\ colon.ttf);
-}
+        }
+        .logo{
+            zoom: 5%;
+            position:absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+
+        }
+
         #content{
             height: 830px;
             padding-top: 300px;
