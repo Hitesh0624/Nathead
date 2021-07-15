@@ -110,8 +110,8 @@
         }
         .screen{
             position: absolute;
-            height: 147.7px;
-            width: 250px;
+            height: 138.11px;
+            width: 233.77x;
             background-color: white;
             left: 50%;
             -webkit-transform: translate(-50%, 25%);
@@ -119,8 +119,8 @@
         }
         .screen-images{
 
-            height: 147.7px;
-            width: 250px;
+            height: 138.11px;
+            width: 233.77px;
             
         }
         #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8{
@@ -137,8 +137,8 @@
             padding: 0;
             margin: 0;
         }
-        #mobile-laptop{
-            width:363.6px ;
+        .mobile-laptop{
+            width:340px ;
             left: 50%;
             -webkit-transform: translate(-50%, 10%);
             transform: translate(-50%, 10%);

@@ -31,6 +31,7 @@ function verifysize(){
     $("#static_image").css("left","0%")
     $("#static_image").css("width",ww)
     $(".screen").css("display","block")
+    $(".mobile-laptop").css("display","block")
     if(ww<500){
         $(".service-heading").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
@@ -46,6 +47,7 @@ function verifysize(){
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-150%")
+        
     }
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
@@ -55,6 +57,7 @@ function verifysize(){
     else if(ww>1400){
         $("#laptop").css("display","block")
         $(".screen").css("display","none")
+        $(".mobile-laptop").css("display","none")
     }
 }
 verifysize();
