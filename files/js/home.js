@@ -39,7 +39,7 @@ function verifysize(){
         $(".abtus").css("font-size","18px")
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
-        $("#service-panel").css("height","5000px")
+        $("#service-panel").css("height","3000px")
         $("#icon").attr("href","files/img/fevicon_dark.png")
         $(".gif").css("zoom","40%")
         $(".gif").css("margin","auto")
