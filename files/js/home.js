@@ -9,7 +9,7 @@ l=1;
 q=0
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
-$("#static_image").css("height",h)
+$("#static_image").css("height",h+200)
 function verifysize(){
     ww=$(window).width()
     $("#back_img,nav").css("background-size",182800/ww+"%");
@@ -44,7 +44,7 @@ function verifysize(){
         $(".gif").css("margin","auto")
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
-        $("#static_image").css("left","-150%")
+        $("#static_image").css("left","-140%")
         
         
     }
