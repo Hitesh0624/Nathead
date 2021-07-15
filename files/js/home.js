@@ -1,6 +1,8 @@
 
 a=$(window).scrollTop();
 r=1;
+i=1;
+l=1;
 h=$(window).height();
 $("#static_image").css("height",$(window).height())
 function verifysize(){
@@ -73,6 +75,29 @@ $(window).on("scroll touchmove",function() {
         $("nav").css("background-image","url(files/img/12.jpeg)")
         $("nav").fadeIn(150);
     }
-a=$(window).scrollTop();
-    })
+    var g=$("#t"+i).offset().top
+    if(a<scroll){
+        if(scroll+h>=g&&l==1){
+            l=0;
+            $("#t"+i).animate({opacity:"1"},500);
+        }
+        if(scroll>=g&&l==0){
+            $("#t"+i).animate({opacity:"0"},500);
+            i++
+            l=1;
+        }
+    }
+    else if(a>scroll){
+        if(scroll>=g&&l==1){
+            $("#t"+i).animate({opacity:"1"},500);
+            i--
+            l=0;
+        }
+        if(scroll+h>=(g)&&l==0){
+            l=1;
+            $("#t"+i).animate({opacity:"0"},500);
+        }
+    }
     
+    a=$(window).scrollTop();
+})

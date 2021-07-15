@@ -41,6 +41,18 @@
             font-family: CC Colon;
             color: white;
         }
+        #whorv{
+            background-color:teal; 
+            height: 800px;
+        }
+        #wwd{
+            background-color:steelblue; 
+            height: 800px; 
+            background-size: contain;
+        }
+        .about{
+            margin: 8% 0% 0% 10%;
+        }
         #button-1{
             border-radius: 50px;
             font-weight: bolder;
@@ -75,4 +87,14 @@
         .laptop-images{
             height: 312px;
             position: absolute;
+        }
+        #laptop-screen{
+            position:absolute; 
+            height: 312px;
+            width: 518px;
+            left: 126px;
+            top: 26px;
+        }
+        #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8{
+            opacity: 0;
         }
