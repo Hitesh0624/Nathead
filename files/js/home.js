@@ -2,6 +2,7 @@
 a=$(window).scrollTop();
 r=1;
 h=$(window).height();
+$("#static_image").css("height",$(window).height())
 function verifysize(){
     ww=$(window).width()
     $("#back_img,nav").css("background-size",182800/$(window).width()+"%");
@@ -20,7 +21,8 @@ function verifysize(){
     $(".gif").css("margin","16% 0%")
     $(".about").css("margin-left","10%")
     $(".empty").css("height","600px")
-    $("#static-image").css("width",ww)
+    $("#static_image").css("height",$(window).height())
+    $("#static_image").css("left","0%")
     if(ww<500){
         $(".service-heading").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
@@ -35,6 +37,7 @@ function verifysize(){
         $(".gif").css("margin","auto")
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
+        $("#static_image").css("left","-170%")
     }
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
@@ -72,5 +75,4 @@ $(window).on("scroll touchmove",function() {
     }
 a=$(window).scrollTop();
     })
-$("#static-image").css("width",$(window).width())
     
