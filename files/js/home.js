@@ -5,7 +5,8 @@ ww=$(window).width()
 r=1;
 i=1;
 l=1;
-q=0
+q=0;
+v=0
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
 var w=parseFloat($(".logo").css("width"))*233/300;
@@ -23,6 +24,7 @@ function verifysize(){
     $(".laptop-screen").css("zoom","100%")
     $(".about").removeClass("col-lg-8")
     $(".about").addClass("col-lg-6")
+    zoom=172800/$(window).width()+100;
 
     if(ww<500){
         $(".service-heading").css("font-size","36px")
@@ -105,9 +107,12 @@ $(window).resize(function(){
 
 $(window).on("scroll touchmove",function() {
     var scroll = $(window).scrollTop();
-    var zoom=172800/$(window).width();
-    $("#static_image").css("display","block")
-    $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
+
+    if(v==0){
+        $("#static_image").css("display","block")
+        v=1
+    }
+
     
     if((a-$(window).scrollTop())<0 && n==0){
         $("#nathead").stop();
@@ -128,7 +133,11 @@ $(window).on("scroll touchmove",function() {
         }
     
     if(scroll>($("#whorv").offset().top-50)){
-        $("nav").css("background-image","url(files/img/service.jpeg)")
+        if(v==1){
+            $("nav").css("background-image","url(files/img/service.jpeg)")
+            v=2
+        }
+
         if(a-scroll>0&&r==0){
             $("nav").fadeIn(150);
             r++
@@ -139,8 +148,13 @@ $(window).on("scroll touchmove",function() {
         }
     }   
     else{
-        $("nav").css("background-image","url(files/img/header.jpeg)")
-        $("nav").fadeIn(150);
+        $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
+        if(v==2){
+            $("nav").css("background-image","url(files/img/header.jpeg)")
+            v=1
+        }
+        if(r==0)
+            $("nav").fadeIn(150);
     }
     z=0
     if(($(window).width())<1400)
@@ -149,24 +163,18 @@ $(window).on("scroll touchmove",function() {
         item=$("#t"+i)
         if(((item.offset().top+item.height()+z)<=(scroll+h) )&& (item.offset().top>=scroll))
         {
-            if(JSON.stringify(x)==JSON.stringify(y)){
-                x[i-1]="1"
+            if(q==0){
                 item.animate({opacity:"1"},100);
                 q=i
-                $("#laptop-screen").animate({scrollLeft:(i-1)*444.2}, 300);
+                $("#laptop-screen").animate({scrollLeft:(i-1)*444.2}, 100);
                
             }
-            
         }
-        else {
-            if(i==q){
-                x[i-1]="0"
+        else if(i==q)
+            {
                 item.animate({opacity:"0"},100);
                 q=0
             }
-        }
-        
     }
-    
     a=$(window).scrollTop();
 })
