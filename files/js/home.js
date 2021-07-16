@@ -24,7 +24,7 @@ function verifysize(){
     $("").css("zoom","100%")
     $(".about").removeClass("col-lg-8")
     $(".about").addClass("col-lg-6")
-    zoom=172800/$(window).width()+100;
+    zoom=172800/$(window).width();
 
     if($("#n").offset().left>$("#nathead").offset().left)
         $("#dash").css("left",$("#n").offset().left)
@@ -104,7 +104,6 @@ $(window).on("scroll touchmove",function() {
         v=1
     }
 
-    
     if(m<0 && n==0){
         $("#nathead,#dash").stop();
         $("#nathead").fadeOut(100);

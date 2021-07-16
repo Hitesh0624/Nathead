@@ -55,7 +55,7 @@
             height: 800px;
         }
         #wwd{
-            background-color:steelblue; 
+            background-color:rgb(72, 138, 188); 
             height: 800px; 
             background-size: contain;
         }
@@ -94,6 +94,7 @@
             box-shadow: none;
         }
         .laptop-images{
+            object-fit: fill;
             height: 260px;
             width: 441px;
             position: relative;
