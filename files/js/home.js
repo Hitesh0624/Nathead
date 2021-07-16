@@ -6,7 +6,8 @@ r=1;
 i=1;
 l=1;
 q=0;
-v=0
+v=0;
+s=0;
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
 var w=parseFloat($(".logo").css("width"))*233/300;
@@ -167,11 +168,45 @@ $(window).on("scroll touchmove",function() {
     a=$(window).scrollTop();
 })
 
+
+
+
+
+
+
+function dropboxoff(){
+    if(s==1){
+        $("#header").animate({height:"70px"},300,function(){$("#dropbox").css("display","none");})
+        s=0;         
+    }}
+$("#mainNav").click(function(){
+    if(s==0){
+        if(parseFloat($("body").css('width'))>=450)
+            $("#header").animate({height:"300px"},300);
+        else
+            $("#header").animate({height:"330px"},300);
+        k=1;
+        
+        $("#dropbox").css("display","block");
+        $(".dropbtn").css("background-color","#D9D9DB");
+    }
+    else 
+        dropboxoff();
+})
+
+
+
+
+
+
+
+
+
+
+
+
 function hi() {
-    "use strict"; // Start of use strict
-  
-   
-    var mainNav = document.querySelector('#mainNav');
+    var mainNav = $("#mainNav");
   
     if (mainNav) {
   

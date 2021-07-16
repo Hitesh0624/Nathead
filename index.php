@@ -1,3 +1,4 @@
+<?php if (substr_count($_SERVER[‘HTTP_ACCEPT_ENCODING’], ‘gzip’)) ob_start(“ob_gzhandler”); else ob_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -14,30 +15,43 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
     
+
+
+
+
+
     <div class="container">
         <div class="row">
-        <div class="col-lg-6 text-center">
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background-image:url(files/img/header.avif);background-size: 120%;">
-            <div class="container col-lg-10" style="padding-top:20px;">
-                <a href="#page-top">
-                    <img src="files/img/nathead.avif" class="logo" id="nathead">
-                    <img src="files/img/dash.avif" class="logo" id="dash">
-                    <img src="files/img/n.avif" class="logo" id="n">
-                </a>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" id="tripledash" style="zoom: 200%;"aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a href="contact.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn">Contact Us</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a href="login.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn" >Login</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a href="signup.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn" >Sign up</a></li>
-                    </ul>
+            <div class="col-lg-6 text-center">
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="color: white;background-image:url(files/img/header.avif);background-size: 120%;">
+                <div class="container col-lg-10" style="padding-top:20px;">
+                    <a href="#page-top">
+                        <img src="files/img/nathead.avif" class="logo" id="nathead">
+                        <img src="files/img/dash.avif" class="logo" id="dash">
+                        <img src="files/img/n.avif" class="logo" id="n">
+                    </a>
+                    <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white navbar-toggler-right text-uppercase rounded" id="tripledash" style="zoom: 200%;"aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a href="contact.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn">Contact Us</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a href="login.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn" >Login</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a href="signup.html" class="nav-link py-3 px-0 px-lg-3 rounded h-btn" >Sign up</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
         </nav>
         </div>
     </div>
+    
+    
+    
+    
+    
+    
+    
+    
     <img src="files/img/static.avif" style="z-index: -1;position: fixed;display: none;"id="static_image">
     <header style="background-image:url(files/img/header.avif);background-size: 120%;" id="back_img">
         <div class="container">
@@ -62,7 +76,11 @@
         </div>
     </section>
     
-    <div class="empty"></div>
+    <div class="empty">
+    
+
+
+    </div>
 
 
     <section style="background-image: url(files/img/service.avif); height: 4800px; background-size: contain;"id="service-panel">
