@@ -17,7 +17,7 @@ function verifysize(){
     $("#back_img,nav").css("background-size",182800/ww+"%");
     $("#static_image").css("height",h+200)
     $("#laptop").css("display","none")
-    $("#icon").attr("href","files/img/fevicon.png")
+    $("#icon").attr("href","files/img/fevicon.avif")
     $(".screen").css("display","block")
     $(".mobile-laptop").css("display","block")
     $(".mobile-laptop,.laptop-screen,.screen").css("zoom","100%")
@@ -39,7 +39,7 @@ function verifysize(){
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
         $("#service-panel").css("height","3000px")
-        $("#icon").attr("href","files/img/fevicon_dark.png")
+        $("#icon").attr("href","files/img/fevicon_dark.avif")
         $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
@@ -122,7 +122,7 @@ $(window).on("scroll touchmove",function() {
     
     if(scroll>($("#whorv").offset().top-50)){
         if(v==1){
-            $("nav").css("background-image","url(files/img/service.jpeg)")
+            $("nav").css("background-image","url(files/img/service.avif)")
             v=2
         }
 
@@ -138,7 +138,7 @@ $(window).on("scroll touchmove",function() {
     else{
         $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
         if(v==2){
-            $("nav").css("background-image","url(files/img/header.jpeg)")
+            $("nav").css("background-image","url(files/img/header.avif)")
             v=1
         }
         if(r==0)
