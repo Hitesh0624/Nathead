@@ -148,7 +148,6 @@ $(window).on("scroll touchmove",function() {
         }
     }   
     else{
-        if(ww>500)
             $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
         if(v==2){
             $("nav").css("background-image","url(files/img/header.avif)")
