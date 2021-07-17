@@ -31,6 +31,7 @@ function verifysize(){
         $("#dash").css("left",$("#n").offset().left)
     else
         $("#dash").css("left",$("#nathead").offset().left)
+    
     b=parseFloat($("#dash").css("left"));
 
     if(ww<500){
@@ -146,7 +147,8 @@ $(window).on("scroll touchmove",function() {
         }
     }   
     else{
-        $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
+        if(ww>500)
+            $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
         if(v==2){
             $("nav").css("background-image","url(files/img/header.avif)")
             v=1
@@ -200,51 +202,3 @@ $("#mainNav").click(function(){
     else 
         dropboxoff();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-function hi() {
-    var mainNav = $("#mainNav");
-  
-    if (mainNav) {
-  
-      var navbarCollapse = mainNav.querySelector('.navbar-collapse');
-      
-      if (navbarCollapse) {
-        
-        var collapse = new bootstrap.Collapse(navbarCollapse, {
-          toggle: false
-        });
-        
-        var navbarItems = navbarCollapse.querySelectorAll('a');
-        
-        for (var item of navbarItems) {
-          item.addEventListener('click', function (event) {
-            collapse.hide();
-          });
-        }
-      }
-      var collapseNavbar = function() {
-  
-        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-  
-        if (scrollTop > 100) {
-          mainNav.classList.add("navbar-shrink");
-        } else {
-          mainNav.classList.remove("navbar-shrink");
-        }
-      };
-      collapseNavbar();
-      document.addEventListener("scroll", collapseNavbar);
-    }
-  
-  };
