@@ -88,7 +88,7 @@ function verifysize(){
         $(".empty").css("height","600px")
         $(".about").css("margin-left","10%")
         $(".gif").css({"height": "420px","width": "560px","margin":"16% 0%"})
-        $("#service-panel").css("height","4800px")
+        $("#service-panel").css("height","4200px")
         $("#whorv,#wwd").css("height","800px")
         $(".service-heading,.question").css("font-size","72px")
         $("#content-caption").css("font-size","66px")
@@ -104,7 +104,7 @@ verifysize();
 
 $(window).resize(function(){
     if($(window).width()-ww!=0)
-        verifysize();
+    verifysize();
 })
 
 
