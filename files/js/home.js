@@ -25,6 +25,7 @@ function verifysize(){
     $("").css("zoom","100%")
     $(".about").removeClass("col-lg-8")
     $(".about").addClass("col-lg-6")
+    $(".service-div").css("opacity","1")
     zoom=172800/$(window).width();
 
     if($("#n").offset().left>$("#nathead").offset().left)
@@ -39,12 +40,13 @@ function verifysize(){
         $("#caption,.abtus").css("font-size","18px")
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
-        $("#service-panel").css("height","3000px")
+        $("#service-panel").css("height","5000px")
         $("#icon").attr("href","files/img/fevicon_dark.avif")
         $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-140%")
+        $(".service-div").css("margin-bottom","300px")
     }
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
@@ -53,11 +55,12 @@ function verifysize(){
         $(".empty").css("height","400px")
         $(".about").removeClass("col-lg-6")
         $(".about").addClass("col-lg-8")
-        $("#service-panel").css("height","3000px")
+        $("#service-panel").css("height","6500px")
         $("#whorv,#wwd").css("height","800px")
         $(".question").css("font-size","72px")
         $(".abtus").css("font-size","20px")
         $(".about").css("margin-left","0%")
+        $(".service-div").css("margin-bottom","500px")
     }
     else if(ww<1400){
         $(".screen,.mobile-laptop,.laptop-screen").css("zoom","140%")
@@ -66,12 +69,13 @@ function verifysize(){
         $(".about").removeClass("col-lg-6")
         $(".about").addClass("col-lg-8")
         $(".about").css("margin-left","10%")
-        $("#service-panel").css("height","4000px")
+        $("#service-panel").css("height","8000px")
         $("#whorv,#wwd").css("height","800px")
         $(".service-heading,.question").css("font-size","72px")
-        $("#content-caption").css("font-size","66px")
+        $("#content-caption").css("font-size","56px")
         $("#caption").css("font-size","36px")
         $(".abtus").css("font-size","20px")
+        $(".service-div").css("margin-bottom","500px")
 
 
     }
@@ -87,6 +91,8 @@ function verifysize(){
         $("#content-caption").css("font-size","66px")
         $("#caption").css("font-size","36px")
         $(".abtus").css("font-size","20px")
+        $(".service-div").css("opacity","0")
+        $(".service-div").css("margin-bottom","0px")
     }
 }
 
@@ -145,12 +151,10 @@ $(window).on("scroll touchmove",function() {
         if(r==0)
             $("nav").fadeIn(150);
     }
-    z=0
-    if(($(window).width())<1400)
-        z=198.7
+    if(ww>1400)
     for(i=1;i<9;i++){
         item=$("#t"+i)
-        if(((item.offset().top+item.height()+z)<=(scroll+h) )&& (item.offset().top>=scroll))
+        if(((item.offset().top+item.height())<=(scroll+h) )&& (item.offset().top>=scroll))
         {
             if(q==0){
                 item.animate({opacity:"1"},100);
