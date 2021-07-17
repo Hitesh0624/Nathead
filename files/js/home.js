@@ -40,13 +40,13 @@ function verifysize(){
         $("#caption,.abtus").css("font-size","18px")
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
-        $("#service-panel").css("height","5000px")
+        $("#service-panel").css("height","5500px")
         $("#icon").attr("href","files/img/fevicon_dark.avif")
         $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-140%")
-        $(".service-div").css("margin-bottom","300px")
+        $(".service-div").css("margin-bottom","400px")
     }
     else if(ww<800){
         $(".service-heading").css("font-size","40px")
