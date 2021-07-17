@@ -20,14 +20,11 @@ function verifysize(){
     $("#static_image").css("top","0")
     $("#laptop").css("display","none")
     $("#icon").attr("href","files/img/fevicon.avif")
-    $(".screen").css("display","block")
-    $(".mobile-laptop").css("display","block")
+    $(".screen,.mobile-laptop").css("display","block")
     $(".mobile-laptop,.laptop-screen,.screen").css("zoom","100%")
-    $("").css("zoom","100%")
     $(".about").removeClass("col-lg-8")
     $(".about").addClass("col-lg-6")
     $(".service-div").css("opacity","1")
-    $("#static_image").css("left","-0%")
     zoom=172800/$(window).width();
 
     if($("#n").offset().left>$("#nathead").offset().left)
@@ -55,7 +52,7 @@ function verifysize(){
         $(".service-heading").css("font-size","40px")
         $("#content-caption,#caption").css("font-size","36px")
         $(".gif").css("display","none")
-        $(".empty").css("height","400px")
+        $(".empty").css("height","300px")
         $(".about").removeClass("col-lg-6")
         $(".about").addClass("col-lg-8")
         $("#service-panel").css("height","6500px")
@@ -64,10 +61,11 @@ function verifysize(){
         $(".abtus").css("font-size","20px")
         $(".about").css("margin-left","0%")
         $(".service-div").css("margin-bottom","500px")
+        $("#static_image").css("left","0%")
     }
     else if(ww<1400){
         $(".screen,.mobile-laptop,.laptop-screen").css("zoom","140%")
-        $(".empty").css("height","500px")
+        $(".empty").css("height","400px")
         $(".gif").css("display","none")
         $(".about").removeClass("col-lg-6")
         $(".about").addClass("col-lg-8")
@@ -79,6 +77,7 @@ function verifysize(){
         $("#caption").css("font-size","36px")
         $(".abtus").css("font-size","20px")
         $(".service-div").css("margin-bottom","500px")
+        $("#static_image").css("left","0%")
 
 
     }
@@ -96,6 +95,7 @@ function verifysize(){
         $(".abtus").css("font-size","20px")
         $(".service-div").css("opacity","0")
         $(".service-div").css("margin-bottom","0px")
+        $("#static_image").css("left","0%")
     }
 }
 
@@ -137,11 +137,11 @@ $(window).on("scroll touchmove",function() {
         }
 
         if(m>0&&r==0){
-            $("nav").fadeIn(150);
+            $("nav").fadeIn(100);
             r++
         }
         else if(m<0&&r==1){
-            $("nav").fadeOut(150);
+            $("nav").fadeOut(100);
             r--;
         }
     }   
@@ -152,7 +152,7 @@ $(window).on("scroll touchmove",function() {
             v=1
         }
         if(r==0)
-            $("nav").fadeIn(150);
+            $("nav").fadeIn(100);
     }
     if(ww>1400)
     for(i=1;i<9;i++){
