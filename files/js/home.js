@@ -16,7 +16,8 @@ var b=parseFloat($("#dash").css("left"));
 function verifysize(){
     ww=$(window).width()
     $("#back_img,nav").css("background-size",182800/ww+"%");
-    $("#static_image").css("height",h+200)
+    $("#static_image").css("zoom","100%")
+    $("#static_image").css("top","0")
     $("#laptop").css("display","none")
     $("#icon").attr("href","files/img/fevicon.avif")
     $(".screen").css("display","block")
@@ -26,6 +27,7 @@ function verifysize(){
     $(".about").removeClass("col-lg-8")
     $(".about").addClass("col-lg-6")
     $(".service-div").css("opacity","1")
+    $("#static_image").css("left","-0%")
     zoom=172800/$(window).width();
 
     if($("#n").offset().left>$("#nathead").offset().left)
@@ -46,6 +48,7 @@ function verifysize(){
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-140%")
+
         $(".service-div").css("margin-bottom","400px")
     }
     else if(ww<800){
