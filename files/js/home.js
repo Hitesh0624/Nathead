@@ -10,7 +10,6 @@ v=0;
 s=0;
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
-alert($(window).height())
 var w=parseFloat($(".logo").css("width"))*233/300;
 var n=0;
 var b=parseFloat($("#dash").css("left"));
@@ -104,6 +103,7 @@ function verifysize(){
 verifysize();
 
 $(window).resize(function(){
+    if($(window).width()-ww!=0)
         verifysize();
 })
 
