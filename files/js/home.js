@@ -27,7 +27,7 @@ function verifysize(){
     $(".service-div").css("opacity","1")
     zoom=172800/$(window).width();
 
-    if($("#n").offset().left>$("#nathead").offset().left)
+    if($("#n").css("display")!="none")
         $("#dash").css("left",$("#n").offset().left)
     else
         $("#dash").css("left",$("#nathead").offset().left)
@@ -40,7 +40,7 @@ function verifysize(){
         $("#caption,.abtus").css("font-size","18px")
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
-        $("#service-panel").css("height","5500px")
+        $("#service-panel").css("height","5800px")
         $("#icon").attr("href","files/img/fevicon_dark.avif")
         $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
@@ -116,14 +116,14 @@ $(window).on("scroll touchmove",function() {
     }
 
     if(m<0 && n==0){
-        $("#nathead,#dash").stop();
+        $("#nathead,#dash,#n").stop();
         $("#nathead").fadeOut(100);
         $("#n").show();
         $("#dash").animate({left: b-w}, 100);
         n=1;
     }
     else if(m>0 && n==1){
-        $("#nathead,#dash").stop();
+        $("#nathead,#dash,#n").stop();
         $("#nathead").fadeIn(100,function(){
         $("#n").hide();
         });
