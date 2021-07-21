@@ -29,7 +29,7 @@ function verifysize(){
 
     if($("#n").css("display")!="none")
         $("#dash").css("left",$("#n").offset().left)
-    else if($("#nathead").css("display")!="none")
+    else
         $("#dash").css("left",$("#nathead").offset().left)
     
     b=parseFloat($("#dash").css("left"));

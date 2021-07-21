@@ -173,3 +173,22 @@
             text-decoration: none;
             display: block;
         }
+
+
+
+
+
+        .service-btn a{
+            border-radius: 100px;
+            float: left;
+            margin: 10px;
+            font-family: monospace;
+
+        }
+        #service-caption{
+            font-family: CC Colon;
+            height: 1000px;
+            padding-top: 200px;
+            font-size: 50px;
+
+        }
