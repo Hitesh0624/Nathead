@@ -19,7 +19,7 @@ function verifysize(){
     $("#static_image").css("zoom","100%")
     $("#static_image").css("top","0")
     $("#laptop").css("display","none")
-    $("#icon").attr("href","files/img/fevicon.avif")
+    $("#icon").attr("href","files/img/fevicon.webp")
     $(".screen,.mobile-laptop").css("display","block")
     $(".mobile-laptop,.laptop-screen,.screen").css("zoom","100%")
     $(".about").removeClass("col-lg-8")
@@ -41,7 +41,7 @@ function verifysize(){
         $("#whorv").css("height","900px")
         $("#wwd").css("height","1000px")
         $("#service-panel").css("height","5800px")
-        $("#icon").attr("href","files/img/fevicon_dark.avif")
+        $("#icon").attr("href","files/img/fevicon_dark.webp")
         $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
@@ -134,7 +134,7 @@ $(window).on("scroll touchmove",function() {
     
     if(scroll>($("#whorv").offset().top-50)){
         if(v==1){
-            $("nav").css("background-image","url(files/img/service.avif)")
+            $("nav").css("background-image","url(files/img/service.webp)")
             v=2
         }
 
@@ -151,7 +151,7 @@ $(window).on("scroll touchmove",function() {
         if(ww>500)
             $("#back_img,nav").css("background-size",zoom+scroll/5+"%");
         if(v==2){
-            $("nav").css("background-image","url(files/img/header.avif)")
+            $("nav").css("background-image","url(files/img/header.webp)")
             v=1
         }
         if(r==0)

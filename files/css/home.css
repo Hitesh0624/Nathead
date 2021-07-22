@@ -55,7 +55,8 @@
             height: 800px;
         }
         #wwd{
-            background-color:rgb(72, 138, 188); 
+            /* background-color:rgb(72, 138, 188);  */
+            background-color:steelblue; 
             height: 800px; 
             background-size: contain;
         }
