@@ -41,7 +41,7 @@ function verifysize(){
         $("#wwd").css("height","1000px")
         $("#service-panel").css("height","5800px")
         $("#icon").attr("href","files/img/fevicon_dark.webp")
-        $(".gif").css({"height": "240px","width": "320px","margin":"auto","display":"block"})
+        $(".gif").css({"width": "320px","margin":"auto","display":"block"})
         $(".about").css("margin-left","0%")
         $(".empty").css("height","300px")
         $("#static_image").css("left","-140%")
