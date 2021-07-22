@@ -10,7 +10,7 @@ v=0;
 s=0;
 x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
-w=parseFloat($("#dash").css("width"))*233/300;
+w=2911.5291666666667;
 var n=0;
 
 function verifysize(){
@@ -33,7 +33,6 @@ function verifysize(){
         $("#dash").css("left",$("#nathead").offset().left)
     
     b=parseFloat($("#dash").css("left"));
-
     if(ww<500){
         $(".service-heading,.question").css("font-size","36px")
         $("#content-caption").css("font-size","33px")
