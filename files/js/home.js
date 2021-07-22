@@ -12,8 +12,7 @@ x=["0","0","0","0","0","0","0","0"]
 y=["0","0","0","0","0","0","0","0"]
 var w=parseFloat($(".logo").css("width"))*233/300;
 var n=0;
-var b=parseFloat($("#dash").css("left"));
-alert(b)
+
 function verifysize(){
     ww=$(window).width()
     $("#back_img,nav").css("background-size",182800/ww+"%");
@@ -34,6 +33,7 @@ function verifysize(){
         $("#dash").css("left",$("#nathead").offset().left)
     
     b=parseFloat($("#dash").css("left"));
+    alert(b,b-w)
 
     if(ww<500){
         $(".service-heading,.question").css("font-size","36px")
