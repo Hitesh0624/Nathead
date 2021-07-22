@@ -32,7 +32,7 @@ function verifysize(){
         $("#dash").css("left",$("#nathead").offset().left)
     
     b=parseFloat($("#dash").css("left"));
-    var w=parseFloat($(".logo").css("width"))*233/300;
+    w=parseFloat($(".logo").css("width"))*233/300;
     alert(b)
     alert(b-w)
 
