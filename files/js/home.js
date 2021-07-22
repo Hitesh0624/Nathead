@@ -34,7 +34,7 @@ function verifysize(){
     b=parseFloat($("#dash").css("left"));
     w=parseFloat($(".logo").css("width"))*233/300;
     alert(b)
-    alert(b-w)
+    alert(w)
 
     if(ww<500){
         $(".service-heading,.question").css("font-size","36px")
