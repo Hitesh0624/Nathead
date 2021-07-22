@@ -33,7 +33,8 @@ function verifysize(){
         $("#dash").css("left",$("#nathead").offset().left)
     
     b=parseFloat($("#dash").css("left"));
-    alert(b,b-w)
+    alert(b)
+    alert(b-w)
 
     if(ww<500){
         $(".service-heading,.question").css("font-size","36px")
