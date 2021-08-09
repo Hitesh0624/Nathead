@@ -1,0 +1,66 @@
+
+        @font-face {
+            font-family: CC Colon;
+            src: url(../font/cc\ colon.ttf);
+        }
+        .logo{
+            zoom: 5%;
+            position:absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+
+        }
+
+        #content{
+            color: white;
+        }
+        .footertext a{
+            padding:0px 0px;
+            color: white;
+            font-size: 15px;
+            text-decoration-line: none;
+        }
+        .footertext a:hover{
+            color: darkgrey;
+        }
+        #contact{
+            border-color: white;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 30px;
+            position: relative;
+            top:0px;
+        }
+        #contact a {
+            font-family:sans-serif;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin: 3px 6px; 
+            padding: 6px;
+            text-decoration: none;
+            display: block;
+        }
+        .icon-text{
+            color: white;
+        }
+
+        .icon-text a{
+            color: lightskyblue;
+            text-decoration: none;
+        }
+
+        .social-icon{
+            background-color: lightskyblue;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        #contact-wrapper{
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: cornflowerblue;
+            margin: 0;
+            padding: 0;
+        }
