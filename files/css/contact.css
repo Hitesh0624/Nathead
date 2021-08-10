@@ -58,9 +58,8 @@
             border-radius: 50%;
         }
         #contact-wrapper{
-            border: 2px solid black;
             border-radius: 30px;
-            background-color: cornflowerblue;
+            background-color: rgb(2, 7, 28);
             margin: 0;
             padding: 0;
         }
@@ -81,5 +80,58 @@
             padding: 10px 0;
             display: none;
             font-size: 16px;
-            font-weight: bold; }
+            font-weight: bold; 
+        }
+        #submitting{
+            background-color: #FF0000;
+        }
+        input[type="text"]{
+        }
+        .floating-label { 
+            position:relative;  
+          }
+          .floating-input {
+            font-size:14px;
+            display:block;
+            width:160px;
+            height:30px;
+            background-color: transparent;
+              color: white;
+            border:none;
+            border-bottom:1px solid white;
+          }
+          #tx{
+            height: 180px;
+            border: 1px solid white;
+            padding: 5px;
+          }
+
+          label#txt{
+            top:-180px;
+            left: 5px;
+          }
+          .floating-input:focus ~ label#txt, .floating-input:not(:placeholder-shown) ~ label#txt {
+            top:-205px;
+            left: 0;
+        }
+          .floating-input:focus {
+               outline:none;
+               border-bottom:2px solid white; 
+          }
+          
+          label {
+            color:lightslategray; 
+            font-size:16px;
+            position:relative;
+            pointer-events:none;
+            top:-25px;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+          }
+          
+          .floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+            top:-50px;
+            font-size:14px;
+          }
           
